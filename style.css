@@ -1,0 +1,115 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: 0 auto;
+    padding: 35px 0 60px;
+}
+
+.hero { text-align: center; padding: 25px 10px; }
+
+.badge {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #e9efff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+h1 { margin: 15px 0 10px; font-size: clamp(32px, 7vw, 52px); }
+.hero p { color: #667085; max-width: 650px; margin: auto; line-height: 1.6; }
+
+.card, .info {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    margin-top: 22px;
+    box-shadow: 0 8px 30px rgba(20, 30, 60, .08);
+}
+
+label { display: block; font-weight: 700; margin-bottom: 10px; }
+
+textarea {
+    width: 100%;
+    min-height: 190px;
+    resize: vertical;
+    border: 1px solid #d9dfeb;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 16px;
+    outline: none;
+}
+
+textarea:focus { border-color: #5b6cff; }
+
+.examples {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 14px 0;
+}
+
+button {
+    border: 0;
+    border-radius: 10px;
+    padding: 11px 15px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.primary {
+    width: 100%;
+    background: #111827;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+}
+
+.secondary { background: #eef1f6; color: #344054; }
+
+.result { margin-top: 22px; padding-top: 22px; border-top: 1px solid #eee; }
+.result-title { font-size: 27px; font-weight: 800; margin-bottom: 20px; }
+
+.probability {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+}
+
+.bar { height: 12px; background: #e9edf3; border-radius: 99px; overflow: hidden; }
+#barFill { height: 100%; width: 0%; background: #111827; transition: width .3s; }
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.stats div {
+    background: #f7f8fa;
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.stats span { display: block; color: #667085; font-size: 12px; }
+.stats strong { display: block; margin-top: 5px; font-size: 20px; }
+
+.info p { color: #667085; line-height: 1.7; }
+.error { margin-top: 15px; padding: 12px; background: #fff1f1; border-radius: 10px; color: #b42318; }
+
+.hidden { display: none; }
+
+@media (max-width: 600px) {
+    .container { padding-top: 15px; }
+    .card, .info { padding: 18px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+}
