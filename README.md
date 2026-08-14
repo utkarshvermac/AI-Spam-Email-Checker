@@ -98,8 +98,12 @@ For a college report, mention the real dataset source if you replace the demo da
 - Deep learning/transformer models
 - Cloud deployment
 
+
+
 [![Live Demo](https://img.shields.io/badge/Render-Live%20Demo-brightgreen?style=for-the-badge&logo=render)](https://ai-spam-email-checker.onrender.com/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/utkarshvermac/AI-Spam-Email-Checker)
+
+
 
 
 
