@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Spam Email Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <section class="hero">
+            <div class="badge">BCA ML PROJECT</div>
+            <h1>AI Spam Email Checker</h1>
+            <p>Paste an email or message and let a Machine Learning model classify it as Spam or Not Spam.</p>
+        </section>
+
+        <section class="card">
+            <label for="email">Email message</label>
+            <textarea id="email" placeholder="Paste an email here..."></textarea>
+
+            <div class="examples">
+                <button type="button" class="secondary" onclick="loadSpam()">Spam Example</button>
+                <button type="button" class="secondary" onclick="loadHam()">Normal Example</button>
+                <button type="button" class="secondary" onclick="clearAll()">Clear</button>
+            </div>
+
+            <button id="checkBtn" class="primary" onclick="checkEmail()">Check with AI</button>
+
+            <div id="error" class="error hidden"></div>
+
+            <div id="result" class="result hidden">
+                <div id="resultTitle" class="result-title"></div>
+                <div class="probability">
+                    <span>Spam probability</span>
+                    <strong id="probability">0%</strong>
+                </div>
+                <div class="bar"><div id="barFill"></div></div>
+
+                <div class="stats">
+                    <div><span>Words</span><strong id="words">0</strong></div>
+                    <div><span>Characters</span><strong id="characters">0</strong></div>
+                    <div><span>Links</span><strong id="links">0</strong></div>
+                    <div><span>Suspicious terms</span><strong id="suspicious">0</strong></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info">
+            <h2>How it works</h2>
+            <p><b>TF-IDF</b> converts text into numerical features. <b>Multinomial Naive Bayes</b> then uses patterns learned from the training dataset to classify the message.</p>
+        </section>
+
+        <section class="info">
+            <h2>About the project</h2>
+            <p>This beginner-friendly BCA project demonstrates Machine Learning and basic Natural Language Processing through a Flask web application.</p>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
